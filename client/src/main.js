@@ -1,4 +1,26 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import PrimeVue from "primevue/config";
+import InputText from "primevue/inputtext";
+import ButtonComp from "primevue/button";
+import DialogComp from "primevue/dialog";
+import CheckboxComp from "primevue/checkbox";
+import PasswordComp from "primevue/password";
+import DividerComp from "primevue/divider";
+import CardComp from "primevue/card";
+import "primevue/resources/primevue.min.css";
+import "primevue/resources/themes/bootstrap4-light-blue/theme.css";
+import "primeicons/primeicons.css";
+import "primeflex/primeflex.css";
+import router from "./router";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(router, PrimeVue);
+app.component("InputText", InputText);
+app.component("ButtonComp", ButtonComp);
+app.component("DialogComp", DialogComp);
+app.component("CheckboxComp", CheckboxComp);
+app.component("PasswordComp", PasswordComp);
+app.component("DividerComp", DividerComp);
+app.component("CardComp", CardComp);
+app.mount("#app");
